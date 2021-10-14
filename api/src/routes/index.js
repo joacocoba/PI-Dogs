@@ -94,7 +94,7 @@ router.get("/dogs", async (req, res) => {
     try {
         const { name } = req.query;
         let totalDogs = await getAllDogs();
-      
+        console.log("entre a /dogs ")
         if (name) {
           const filteredDog = await totalDogs.filter((breed) =>
             breed.name.toLowerCase().includes(name.toLowerCase())
