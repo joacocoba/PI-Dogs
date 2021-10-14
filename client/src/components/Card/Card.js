@@ -19,16 +19,18 @@ export default function Card({
       </div>
       <div className="card-information">
         <h3>{name}</h3>
-        {/* {
-          weight.map(el =>{
+        <div className="weight-container">
+        {
+          weight.map((el, i) =>{
             if(el === 0) {
-              return <h4>Unknown</h4>
+              return i === 0 ? <p>Unknown -</p> : <p>Unknown</p>
               }
             else {
-              return <h4>Weight: {el}</h4>
+              return i === 0 ? <p>{el} - </p> : <p>{el} kg</p>
             } 
           })
-          } */}
+          }
+        </div>
         <div className="temperament-container">
         <h5>Temperaments</h5>
         <div className="temperaments">

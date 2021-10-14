@@ -14,9 +14,19 @@ export default function Filter({ pagination }) {
   const dispatch = useDispatch();
   const allTemperaments = useSelector((state) => state.temperaments);
 
-  //   useEffect(() => {
-  //     dispatch(getTemperaments());
-  //   }, []);
+allTemperaments.sort(function (a, b) {
+  if (a.name > b.name) {
+    return 1;
+  }
+  if (a.name < b.name) {
+    return -1;
+  }
+  return 0;
+});
+
+    useEffect(() => {
+      dispatch(getTemperaments());
+    }, []);
 
   const [selectedOrder, setSelectedOrder] = useState("asc");
   const [selectedCategory, setSelectedCategory] = useState("name");
@@ -25,7 +35,7 @@ export default function Filter({ pagination }) {
     if (e.target.value === "name" || e.target.value === "weight") {
       setSelectedCategory(e.target.value);
     } else {
-      setSelectedOrder(e.target.value); //Chequear que onda esto después, ver de sacar y ver si sigue funcionando igual
+      setSelectedOrder(e.target.value); 
     }
   };
 
@@ -37,6 +47,7 @@ export default function Filter({ pagination }) {
 
   const handleFilterByTemperaments = (e) => {
     dispatch(filterBreedsByTemperaments(e.target.value));
+    pagination(1);
   };
 
   const handleFilterCreated = (e) => {

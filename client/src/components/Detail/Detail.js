@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getBreedDetail, getTemperaments } from "../../actions/index";
 import setBgColor from "../Card/Util";
@@ -10,7 +10,6 @@ import { faBalanceScale } from "@fortawesome/free-solid-svg-icons";
 
 export default function Detail(props) {
   const dispatch = useDispatch();
-  console.log(props);
 
   useEffect(() => {
     dispatch(getBreedDetail(props.match.params.id));
@@ -19,7 +18,6 @@ export default function Detail(props) {
 
   const breed = useSelector((state) => state.detail);
   const allTemperaments = useSelector((state) => state.temperaments);
-  console.log(breed[0]);
   return (
     <StyledDetail>
       {breed.length > 0 ? (
@@ -65,7 +63,7 @@ export default function Detail(props) {
                 })}
             </div>
 
-            <h3>Life Expectancy: {breed[0].life_span}</h3>
+            <h3 className="life-expectancy">Life Expectancy: {breed[0].life_span ? breed[0].life_span : "Unknown" } </h3>
 
             <div className="temperament-container">
               <h5>Temperaments: </h5>
@@ -87,7 +85,7 @@ export default function Detail(props) {
           </div>
         </div>
       ) : (
-        <h1>No found</h1>
+        <h1>Loading</h1>
       )}
     </StyledDetail>
   );

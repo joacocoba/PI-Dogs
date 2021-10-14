@@ -27,10 +27,16 @@ background: linear-gradient(to right, #C05F39, #E78E64); /* W3C, IE 10+/ Edge, F
     }
     .form-title{
         color: #fff;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
     .form-containers{
         width: 100%;
+        p {
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin-top: 0px;
+                    margin-bottom: 10px;
+                }
     }
     input {
                 font-size: 15px;
@@ -40,6 +46,7 @@ background: linear-gradient(to right, #C05F39, #E78E64); /* W3C, IE 10+/ Edge, F
                 border: 1px solid black;
                 outline: none;
                 width: 70%;
+               
                 }
 
             select{
@@ -97,7 +104,7 @@ background: linear-gradient(to right, #C05F39, #E78E64); /* W3C, IE 10+/ Edge, F
             }
         }
         .image-container{
-        background-image: url('https://images.unsplash.com/photo-1612536057832-2ff7ead58194?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+        background-image: url('https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
         background-size: cover;
         width: 50%;
         border-radius: 20px;

@@ -17,6 +17,8 @@ const validate = (input) => {
     errors.weightMin = "Weight Min is required";
   } else if (!input.weightMax) {
     errors.weightMax = "Weight Max is required";
+  } else if (!input.life_span) {
+    errors.life_span = "Life Expectancy is required";
   }
   
   return errors;
@@ -159,6 +161,7 @@ export default function CreateBreed() {
                 name="life_span"
                 onChange={(e) => handleInputChange(e)}
               />
+              {errors.life_span && <p>{errors.life_span}</p>}
             </div>
             <select
               onChange={(e) => {

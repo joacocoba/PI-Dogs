@@ -40,11 +40,13 @@ export const StyledDetail = styled.div`
     }
   }
   .information-container{
+    margin-top: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
   }
   .stats-container{
+    margin-top: 50px;
       display: flex;
       justify-content: center;
       p {
@@ -61,7 +63,7 @@ export const StyledDetail = styled.div`
   .stats-values{
       display: flex;
       flex-direction: row;
-      margin-left: 170px;
+      justify-content: center;
     p {
           margin: 10px 5px;
           display: flex;
@@ -70,10 +72,13 @@ export const StyledDetail = styled.div`
           font-weight: bold;
     }
     .separator {
-        margin-right: 35px;
-        margin-left: 35px;
-    }
+        margin-right: 25px;
+        margin-left: 25px;
+    } 
   }
+  .life-expectancy{
+      margin-top: 20px;
+    }
     .temperament-container {
       h5 {
         margin-top: 20px;

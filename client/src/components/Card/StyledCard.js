@@ -5,7 +5,7 @@ export const StyledCard = styled.div`
   display: flex;
   border-radius: 10px;
   overflow: hidden;
-  width: 505px;
+  width: 600px;
   height: 250px;
   background-color: var(--color);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
@@ -35,6 +35,16 @@ export const StyledCard = styled.div`
             color: #fff;
             font-size: 25px;
             font-weight: 900;   
+        }
+        .weight-container {
+            display: flex;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            justify-content: center;
+            p{
+                margin-left: 5px;
+            }
         }
         .temperament-container{
                 h5{
